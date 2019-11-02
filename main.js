@@ -1,15 +1,15 @@
 
 
-
+// DOM elements taken from the HTML file 
 var resultEl = document.getElementById('result');
 var generateEl = document.getElementById('generate');
 var clipboardEl = document. getElementById('clipboard');
 
 
-
+// This fuction prompts the user to place all variables for the generated password
 generateEl.addEventListener('click', function(){
-    var lengthEl = prompt("Select length of password between 8-120 characters:", "8-120");
-    if (lengthEl == null || lengthEl == "" || lengthEl < 8 || lengthEl > 120){
+    var lengthEl = prompt("Select length of password between 8-128 characters:", "8-128");
+    if (lengthEl == null || lengthEl == "" || lengthEl < 8 || lengthEl > 128){
         alert("Not a valid entry try again")
         return ""
     }
@@ -25,33 +25,24 @@ generateEl.addEventListener('click', function(){
     
     var length = lengthEl.value;
     
-    resultEl.innerHTML = generatePW(lowerEl, upperEl, numberEl, symbolEl, lengthEl);  
+    resultEl.innerText = generatePW(lowerEl, upperEl, numberEl, symbolEl, lengthEl);  
     
-    clipboardEl.addEventListener('click', function(){
-        var copyText = document.getElementById("result");
-        copyText.select();
-        // copyText.setSelectionRange(0,99999);
-    
-        document.execCommand('copy');
-        alert("Copied password to clipboard: " + copyText.value);
-        // var resultText = document.createElement('resultText');
-        // var copyPW = resultEl.innerHTML;
-    
-        // if(!copPW){
-        //     return "";
-        // }
-    
-        // textarea.value = copyPW;
-        // document.body.appendChild(textarea);
-        // textarea.select();
-        // document.execCommand('copy');
-        // textarea.remove();
-        // alert("Password copied to clipboard:")
-    
-    });
+  
     
 })
+//Below is the JS code for coping to clipboard via the click event
+clipboardEl.addEventListener('click', function(){
+    if(resultEl.value === ''){
+    return;
+    } else {
+        // document.innertext.appendChild(resultEl);
+        resultEl.select();
+        resultEl.execCommand('copy');
+        alert("Copied password to clipboard:");
+    }
+});
 
+// this function takes the user imputs and places them in an array to form a random password
 function generatePW(lower, upper, number, symbol, length){
     var userGeneratedPW = '';
     var variablesCount = lower + upper + number + symbol;
@@ -74,7 +65,7 @@ function generatePW(lower, upper, number, symbol, length){
     return finalPW
 
 }
-
+// variable to store values in to keys from below
 var randomFunc = {
     lower: randomLwCase,
     upper: randomUpCase,

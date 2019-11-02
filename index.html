@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+    <!-- Head contains the Title, and CSS Bootstrap link along with Personal CSS link -->
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Password Generator</title>
+        <title>Password Generator</title> 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css" type="text/css"/>
     </head>
     <body>
+        <!-- Contains the body of the page and all of the HTML content -->
         <div class="container">
-        <div class="parent-div flex-column d-flex">
+            <div class="parent-div flex-column d-flex">
                 <h1 class="col-lg-12">Password Generator</h1>
                 <div class="child-div">
-                    
                     <div class="actionbox">
-                    <h2>Generate a Password</h2>
-                    <hr>
-                    <div class="result-box">
-                        <span id="result">Your Secure Password</span>
+                        <h2>Generate a Password</h2>
+                        <hr>
+                        <div class="result-box">
+                        <!-- the span below is the location where the JS outputs the random generated password -->
+                        <span id="result"><b>Your Secure Password</b></span>
                         </div>
-                    
-                    <hr>
-                    <div class="buttons d-flex"></div>
-                        <div class="row">
-                            <button class="col-xlg-6 btn-danger"id="generate">Generate Password</button>
-                            <button class="col-xlg-6 btn-basic"id="clipboard">Copy to Clipboard</button>
-                        </div>
+                        <hr>
+                        <!-- the buttons below activate the users input to drive the JS code -->
+                        <div class="buttons d-flex"></div>
+                            <div class="row">
+                                <button class="col-xlg-6 btn-danger"id="generate"><b>Generate Password</b></button>
+                                <button class="col-xlg-6 btn-basic"id="clipboard"><b>Copy to Clipboard</b></button>
+                            </div>
                     </div>
                     
                 </div>
             </div>
         </div>
 
-
+        <!-- This section is where the rest of the Bootstrap script links are attached along with personal JS at the end -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

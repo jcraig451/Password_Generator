@@ -6,7 +6,6 @@ html{
     min-height: 100%;
 
 }
-
 .parent-div{
     width: 80%;
     margin-left: auto;
@@ -49,14 +48,12 @@ h2{
     border-color: #DFD9D7;
     border-radius: 5px;
     padding: 5px 5px;
+    overflow:auto;
 }
 #result{
     color:#727375;
-}
-
-    
-    
-
+    text-align: center;
+}  
 #generate{
     width: 250px;
     height: 40px;
