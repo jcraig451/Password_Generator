@@ -34,10 +34,10 @@ generateEl.addEventListener('click', function(){
 clipboardEl.addEventListener('click', function(){
     if(resultEl.value === ''){
     return;
-    } else {
+    } else{
         // document.innertext.appendChild(resultEl);
         resultEl.select();
-        resultEl.execCommand('copy');
+        document.execCommand('copy');
         alert("Copied password to clipboard:");
     }
 });
